@@ -32,7 +32,108 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.todo-title {
+  font-size: 28px;
+  color: #23262F;
+  font-weight: 700;
+}
+
+.todo-add button {
+  width: 221px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #F80000;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #FCFCFD;
+}
+
+.todo-add button img {
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+
+.todo-input input {
+  width: 725px;
+  height: 38px;
+  padding: 0 8px;
+  margin: 0 0 12px;
+}
+
+table.todo-table {
+  text-align: center;
+  margin: 24px auto;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
+  border-collapse: collapse;
+}
+
+table.todo-table tr {
+  padding: 4px;
+}
+
+table.todo-table th,
+table.todo-table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 4px 0;
+}
+
+.todo-tab {
+  margin-top: 24px;
+}
+
+.todo-tab button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #777E90;
+  border-bottom: 1px solid #E6E8EC;
+  margin: 0 4px;
+  font-weight: 600;
+}
+
+.todo-tab button.active {
+  color: #BD2648;
+  border-bottom: 1px solid #BD2648;
+}
+
+
+button.todo-icon-edit {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border-radius: 50%;
+  background: #09B530;
+  border: none;
+  margin: 0 4px;
+}
+
+button.todo-icon-del {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border-radius: 50%;
+  background: #F80000;
+  border: none;
+  margin: 0 4px;
+}
+
+button.todo-check {
+  background: none;
+  border: none;
 }
