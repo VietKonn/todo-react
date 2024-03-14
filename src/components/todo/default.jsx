@@ -1,11 +1,3 @@
-// import React from 'react';
-
-// const Button = (props) => {
-//     return <button disabled={props.disabled}>Click me</button>
-// };
-
-// export default Button;
-
 import React, { useState } from 'react';
 import plus from '../icon/plus.png';
 import edit from '../icon/edit.png';
@@ -23,27 +15,27 @@ function TodoApp() {
     const [currentTab, setCurrentTab] = useState('todo');
 
     const handleNameInputChange = (e) => {
+        //get value Name input
         setNameInput(e.target.value);
     };
 
     const handleDescriptionInputChange = (e) => {
+        //get value description input
         setDesInput(e.target.value);
     };
 
     const handleAddTodo = () => {
-        if (nameInput.trim() !== '' && desInput.trim() !== '') {
-            if (editIndex !== null) {
-                const newTodos = [...todos];
-                newTodos[editIndex] = { name: nameInput, des: desInput };
-                setTodos(newTodos);
-                setNameInput('');
-                setDesInput('');
-                setEditIndex(null);
-            } else {
-                setTodos([...todos, { name: nameInput, des: desInput }]);
-                setNameInput('');
-                setDesInput('');
-            }
+        if (editIndex !== null) {
+            const newTodos = [...todos];
+            newTodos[editIndex] = { name: nameInput, des: desInput };
+            setTodos(newTodos);
+            setNameInput('');
+            setDesInput('');
+            setEditIndex(null);
+        } else {
+            setTodos([...todos, { name: nameInput, des: desInput }]);
+            setNameInput('');
+            setDesInput('');
         }
     };
 
