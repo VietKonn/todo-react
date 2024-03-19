@@ -71,7 +71,17 @@
   width: 725px;
   height: 38px;
   padding: 0 8px;
-  margin: 0 0 12px;
+  margin: 0 0 28px;
+}
+
+.todo-input div {
+  position: relative;
+}
+
+.todo-input span {
+  position: absolute;
+  bottom: 12px;
+  font-size: 12px;
 }
 
 table.todo-table {
