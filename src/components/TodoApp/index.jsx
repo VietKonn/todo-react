@@ -79,8 +79,6 @@ function TodoApp() {
         }
     };
 
-
-
     const handleSaveEdit = (index) => {
         const updatedTodos = [...tasks];
         updatedTodos[index] = {
