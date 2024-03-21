@@ -4,6 +4,7 @@ import edit from '../icon/edit.png';
 import del from '../icon/del.png';
 import checked from '../icon/checked.png';
 import unchecked from '../icon/unchecked.png';
+import TodoItem from './TodoItem';
 
 function TodoApp() {
     const placeholder = ['Name', 'Description...'];
@@ -79,6 +80,8 @@ function TodoApp() {
         }
     };
 
+
+
     const handleSaveEdit = (index) => {
         const updatedTodos = [...tasks];
         updatedTodos[index] = {
@@ -104,13 +107,19 @@ function TodoApp() {
                 <div className="todo-input">
                     <div>
                         {taskCreationError.name && <span style={{ color: 'red' }}>{taskCreationError.name}</span>}
-                        <input
+                        <TodoItem
+                            name='name'
+                            value={inputValues.name}
+                            placeholder={placeholder[0]}
+                            onChange={handleInputChange}
+                        />
+                        {/* <input
                             type="text"
                             value={inputValues.name}
                             placeholder={placeholder[0]}
                             name='name'
                             onChange={handleInputChange}
-                        />
+                        /> */}
                     </div>
                     <div>
                         {taskCreationError.description && <span style={{ color: 'red' }}>{taskCreationError.description}</span>}
