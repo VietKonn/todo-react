@@ -123,13 +123,19 @@ function TodoApp() {
                     </div>
                     <div>
                         {taskCreationError.description && <span style={{ color: 'red' }}>{taskCreationError.description}</span>}
-                        <input
+                        <TodoItem
+                            name='description'
+                            value={inputValues.description}
+                            placeholder={placeholder[1]}
+                            onChange={handleInputChange}
+                        />
+                        {/* <input
                             type="text"
                             value={inputValues.description}
                             name='description'
                             onChange={handleInputChange}
                             placeholder={placeholder[1]}
-                        />
+                        /> */}
                     </div>
                 </div>
                 <button onClick={handleAddTask}>
